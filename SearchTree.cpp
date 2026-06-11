@@ -46,4 +46,22 @@ public:
             ROOT = newNode;
             return;
         }
-        
+
+         if(element < parent->info)
+        {
+            parent->leftchild = newNode;
+        }
+        else if(element > parent->info)
+        {
+            parent->rightchild = newNode;
+        }
+    }
+
+    // this function searches the current node of the specified node
+    // as well as the current node of its parent
+    void search(string element, Node *&parent, Node *&currentNode)
+    {
+        currentNode = ROOT;
+        parent = NULL;
+
+}
