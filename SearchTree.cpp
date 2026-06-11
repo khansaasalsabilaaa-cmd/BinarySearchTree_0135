@@ -2,18 +2,28 @@
 #include <string>
 using namespace std;
 
-class node
+class Node
 {
 public:
     string info;
-    node *leftchild;
-    node *rightchild;
+    Node *leftchild;
+    Node *rightchild;
 
-    //constructor for node class
-    node(string i, node *l, node *r)
+    //Constructor for node class
+    Node(string i, Node *l, Node *r)
     {
         info = i;
         leftchild = l;
         rightchild = r;
     }
 };
+
+class Binarytree
+{
+public:
+    Node *root;
+
+    Binarytree()
+    {
+        root = NULL;
+    }
