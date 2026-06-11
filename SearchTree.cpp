@@ -18,12 +18,12 @@ public:
     }
 };
 
-class Binarytree
+class BinaryTree
 {
 public:
     Node *ROOT;
 
-    Binarytree()
+    BinaryTree()
     {
         ROOT = NULL;
     }
@@ -148,9 +148,14 @@ int main()
             {
             case '1':
             {
-                cout << "enter a word: ";
+                cout << "Enter a word: ";
                 string word;
                 cin >> word;
                 obj.insert(word);
+                break;
+            }
+            case '2':
+            {
+                obj.inorder(obj.root);
                 break;
             }
