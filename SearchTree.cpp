@@ -21,20 +21,29 @@ public:
 class Binarytree
 {
 public:
-    Node *root;
+    Node *ROOT;
 
     Binarytree()
     {
-        root = NULL;
+        ROOT = NULL;
     }
 
     void insert(string element)
     {
-        node *newnode = new node(element, NULL, NULL);
+        Node *newNode = new Node(element, NULL, NULL);
         
-        newnode->info = element;
-        newnode->leftchild = NULL;
-        newnode->rightchild = NULL;
+        newNode->info = element;
+        newNode->leftchild = NULL;
+        newNode->rightchild = NULL;
 
-        node *parent = NULL;
-        node *currentnode = NULL;
+        Node *parent = NULL;
+        Node *currentNode = NULL;
+
+        search(element, parent, currentNode);
+
+        if (parent == NULL)
+        {
+            ROOT = newNode;
+            return;
+        }
+        
